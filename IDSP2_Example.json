@@ -1,0 +1,216 @@
+{
+	"doss-dsp": {
+		"uuid": "714210d2-f8df-448c-be3e-e2213816cf79",
+		"metadata": {
+			"title": "SmartBulb IDSP",
+			"published": "2025-01-20T13:57:28.355446-04:00",
+			"last-modified": "2025-04-01T13:57:28.355446-04:00",
+			"version": "1.1",
+			"dsp-model-version": "1.0",
+			"revisions": [
+				{
+					"title": "Initial Release",
+					"published": "2025-01-20",
+					"description": "Initial version of the DSP document.",
+					"version": "1.0",
+					"dsp-model-version": "1.0",
+					"modified-by": {
+						"role-id": "manufacturer",
+						"party-uuid": "c0ffee12-3456-7890-abcd-ef0123456789"
+					}
+				},
+				{
+					"title": "Update vulnerabilities and BOMs",
+					"published": "2025-02-02",
+					"description": "Added vunerabilities information and BOMs",
+					"version": "1.1",
+					"dsp-model-version": "1.0",
+					"modified-by": {
+						"party-uuid": "beefdead-1234-5678-90ab-cdef12345678"
+					}
+				}
+			],
+			"links": [
+				{
+					"href": "https://dspp.com/genericDSP/xeefdexd-1234-5678-90ab-cdef12345678",
+					"rel": "Generic DSP",
+					"text": "version 1.0"
+				}
+			],
+			"roles": [
+				{
+					"id": "system-owner",
+					"title": "System Owner",
+					"description": "Responsible for device management in operational context"
+				},
+				{
+					"id": "manufacturer",
+					"title": "Manufacturer",
+					"description": "Creator of the device"
+				}
+			],
+			"parties": [
+				{
+					"uuid": "c0ffee12-3456-7890-abcd-ef0123456789",
+					"type": "organization",
+					"name": "ACME Corp",
+					"remarks": "manufacturer of the device"
+				},
+				{
+					"uuid": "beefdead-1234-5678-90ab-cdef12345678",
+					"type": "person",
+					"name": "John Doe",
+					"email-addresses": [
+						"johndoe@example.com"
+					],
+					"telephone-numbers": [
+						"+1-800-555-0100"
+					],
+					"member-of-organizations": [
+						"ACME Corp"
+					]
+				}
+			],
+			"responsible-parties": [
+				{
+					"role-id": "system-owner",
+					"party-uuid": "beefdead-1234-5678-90ab-cdef12345678"
+				}
+			]
+		},
+		"system-id": {
+			"identifier-type": "http://ietf.org/rfc/rfc4122",
+			"id": "123e4567-e89b-12d3-a456-426614174000"
+		},
+		"local-definitions": {
+			"components": [
+				{
+					"uuid": "91f646c5-b1b6-4786-9ec3-2305a044e217",
+					"type": "this-system",
+					"title": "bulb",
+					"description": "SmartBulb is a bulb that has switches on/off the light using bluetooth control.",
+					"purpose": "Provides light",
+					"props": [
+						{
+							"name": "vendor",
+							"value": "ACME Corp"
+						},
+						{
+							"name": "model",
+							"value": "Smartbulb-X100"
+						},
+						{
+							"name": "version",
+							"value": "3.3"
+						}
+					],
+					"links": [
+						{
+							"href": "https://jondoe.org/fileserver/0078986666",
+							"rel": "MUD file",
+							"media-type": "application/mud+json"
+						},
+						{
+							"href": "https://jondoe.org/fileserver/0078986555",
+							"rel": "SBOM file",
+							"media-type": "application/vnd.cyclonedx+xml"
+						},
+						{
+							"href": "https://jondoe.org/fileserver/007897777",
+							"rel": "CBOM file",
+							"media-type": "application/vnd.cyclonedx+xml"
+						}
+					],
+					"status": {
+						"state": "operational"
+					}
+				}
+			],
+			"risks": [
+				{
+					"uuid": "8b8bae66-b28c-4fa5-9a20-b79e7322fc00",
+					"title": "CVE-2024-7392",
+					"description": "ChargePoint Home Flex Bluetooth Low Energy Denial-of-Service Vulnerability. This vulnerability allows network-adjacent attackers to create a denial-of-service condition on affected installations of ChargePoint Home Flex charging devices. Authentication is not required to exploit this vulnerability. The specific flaw exists within the connection handling of the Bluetooth Low Energy interface. The issue results from limiting the number of active connections to the product. An attacker can leverage this vulnerability to create a denial-of-service condition on the system. Was ZDI-CAN-21455.",
+					"links": [
+						{
+							"href": "https://ACME.org/server/346654",
+							"rel": "VEX",
+							"media-type": "application/vnd.cyclonedx+xml"
+						}
+					],
+					"status": "remediating",
+					"origin": {
+						"actors": [
+							{
+								"type": "party",
+								"actor-uuid": "c0ffee12-3456-7890-abcd-ef0123456789"
+							}
+						]
+					},
+					"threat-ids": [
+						{
+							"system": "https://nvd.nist.gov/vuln/detail/",
+							"href": "https://nvd.nist.gov/vuln/detail/CVE-2024-7392"
+						}
+					],
+					"characterizations": [
+						{
+							"facets": [
+								{
+									"name": "severity",
+									"system": "https://www.first.org/cvss/",
+									"value": "CVSS:3.1/AV:A/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+								}
+							]
+						}
+					],
+					"deadline": "2025-03-02T12:14:16-04:00",
+					"remediations": [
+						{
+							"uuid": "d28873f7-0a45-476d-9cd3-1d2ec0b8bca1",
+							"lifecycle": "planned",
+							"title": "ACME Product Team Response",
+							"description": "The ACME Product Team does not have sufficient personnel and budget to implement the required changes until Dec 2025. Threat MUD file has been released in the meanwhile",
+							"props": [
+								{
+									"name": "type",
+									"value": "accept"
+								}
+							],
+							"links": [
+								{
+									"href": "https://ACME.org/MUDserver/98987t87r",
+									"rel": "Threat MUD file",
+									"media-type": "application/mud+json"
+								}
+							]
+						}
+					],
+					"risk-log": {
+						"entries": [
+							{
+								"uuid": "f8b1d4cb-d1a9-4932-9859-2e93b325f287",
+								"title": "alerted manufacturer",
+								"props": [
+									{
+										"name": "type",
+										"value": "vendor-check-in"
+									}
+								],
+								"logged-by": "c0ffee12-3456-7890-abcd-ef0123456789",
+								"start": "2025-01-02T12:14:16-04:00",
+								"end": "2025-01-02T12:14:16-04:00",
+								"status-change": "remediating"
+							}
+						]
+					},
+					"related-observations": [
+						{
+							"observation-uuid": "0c4de4fc-9bde-46af-b6fe-3b5e78194dcf"
+						}
+					]
+				}
+			]
+		}
+	}
+}

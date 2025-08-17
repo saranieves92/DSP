@@ -1,0 +1,157 @@
+{
+	"doss-dsp": {
+		"uuid": "714210d2-f8df-448c-be3e-e2213816cf79",
+		"metadata": {
+			"title": "SmartBulb generic DSP",
+			"published": "2025-01-01T13:57:28.355446-04:00",
+			"last-modified": "2025-03-01T13:57:28.355446-04:00",
+			"version": "1.0",
+			"dsp-model-version": "1.0",
+			"revisions": [
+				{
+					"title": "Initial Release",
+					"published": "2025-01-01",
+					"description": "Initial version of the DSP document.",
+					"version": "1.0",
+					"dsp-model-version": "1.0",
+					"modified-by": {
+						"role-id": "manufacturer",
+						"party-uuid": "c0ffee12-3456-7890-abcd-ef0123456789"
+					}
+				}
+			],
+			"links": [
+				{
+					"href": "https://acme.com/server/cdef12355545678",
+					"rel": "Technical documentation",
+					"text": "Detailed technical documentation"
+				},
+				{
+					"href": "https://acme.com/server/hkgdkjdkjhd",
+					"rel": "EU conformity",
+					"text": "EU conformity declaration for bulb"
+				},
+				{
+					"href": "https://acme.com/server/signature.p7s",
+					"rel": "DSP signature",
+					"text": "DSP manufacturer signature for integrity of data"
+				}
+			],
+			"roles": [
+				{
+					"id": "manufacturer",
+					"title": "Manufacturer",
+					"description": "Creator of the device"
+				}
+			],
+			"parties": [
+				{
+					"uuid": "c0ffee12-3456-7890-abcd-ef0123456789",
+					"type": "organization",
+					"name": "ACME Corp",
+					"remarks": "manufacturer of the device"
+				}
+			],
+			"responsible-parties": [
+				{
+					"role-id": "manufacturer",
+					"party-uuid": "c0ffee12-3456-7890-abcd-ef0123456789"
+				}
+			]
+		},
+		"local-definitions": {
+			"components": [
+				{
+					"uuid": "91f646c5-b1b6-4786-9ec3-2305a044e217",
+					"type": "this-system",
+					"title": "bulb",
+					"description": "SmartBulb is a bulb that has switches on/off the light using bluetooth control.",
+					"purpose": "Provides light",
+					"props": [
+						{
+							"name": "vendor",
+							"value": "ACME Corp"
+						},
+						{
+							"name": "model",
+							"value": "Smartbulb-X100"
+						},
+						{
+							"name": "version",
+							"value": "3.3"
+						}
+					],
+					"links": [
+						{
+							"href": "https://jondoe.org/fileserver/00789865",
+							"rel": "MUD file",
+							"media-type": "application/mud+json"
+						},
+						{
+							"href": "https://jondoe.org/fileserver/00789865",
+							"rel": "SBOM file",
+							"media-type": "application/vnd.cyclonedx+xml"
+						}
+					],
+					"status": {
+						"state": "operational"
+					}
+				}
+			],
+			"assessment-assets": {
+				"components": [
+					{
+						"uuid": "99999999-b1b6-4786-9ec3-2305a044e217",
+						"type": "SW",
+						"title": "firewall",
+						"description": "SmartBulb firewall",
+						"purpose": "Provides filtering to communications",
+						"status": "deployed"
+					}
+				],
+				"assessment-platforms": [
+					{
+						"uuid": "3f7a6c8e-8b7a-45b9-9ae8-4c6b1b7a9f8e",
+						"title": "Component Tester"
+					}
+				]
+			},
+			"observations": [
+				{
+					"uuid": "0c4de4fc-9bde-46af-b6fe-3b5e78194dcf",
+					"title": "Buffer overread",
+					"description": "Test bulb for buffer overread vulnerabilities",
+					"methods": [
+						"TEST"
+					],
+					"origins": [
+						{
+							"type": "assessment-platform",
+							"actor-uuid": "3f7a6c8e-8b7a-45b9-9ae8-4c6b1b7a9f8e"
+						}
+					],
+					"subjects": [
+						{
+							"subject-uuid": "91f646c5-b1b6-4786-9ec3-2305a044e217",
+							"type": "component"
+						}
+					],
+					"relevant-evidence": [
+						{
+							"description": "CT detailed report",
+							"links": [
+								{
+									"href": "https://doss.org/ct/6575434",
+									"rel": "CT report",
+									"media-type": "application/json"
+								}
+							]
+						}
+					],
+					"collected": "2025-01-02T12:14:16-04:00",
+					"expires": "2025-10-19T12:14:16-04:00"
+				}
+			],
+		}
+	}
+}
