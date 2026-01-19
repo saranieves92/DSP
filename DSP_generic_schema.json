@@ -1,9 +1,9 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"title": "Metaschema for DOSS DSP",
+	"title": "Metaschema for DSP",
 	"type": "object",
 	"properties": {
-		"doss-dsp": {
+		"dsp": {
 			"type": "object",
 			"properties": {
 				"uuid": {
@@ -737,6 +737,7 @@
 		}
 	},
 	"required": [
-		"doss-dsp"
+		"dsp"
 	]
+
 }
