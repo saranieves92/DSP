@@ -3,7 +3,7 @@
 	"title": "Metaschema for DOSS INSTANCE",
 	"type": "object",
 	"properties": {
-		"doss-dsp": {
+		"dsp": {
 			"type": "object",
 			"properties": {
 				"uuid": {
@@ -757,4 +757,5 @@
 	"required": [
 		"doss-dsp"
 	]
+
 }
