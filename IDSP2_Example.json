@@ -1,5 +1,5 @@
 {
-	"doss-dsp": {
+	"dsp": {
 		"uuid": "714210d2-f8df-448c-be3e-e2213816cf79",
 		"metadata": {
 			"title": "SmartBulb IDSP",
@@ -213,4 +213,5 @@
 			]
 		}
 	}
+
 }
