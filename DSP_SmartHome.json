@@ -1,0 +1,169 @@
+{
+	"deviceId": "8aa1419c-91f3-4e68-9bab-32cfd65b0423",
+	"data": {
+		"doss-dsp": {
+			"local-definitions": {
+				"assessment-assets": {
+					"assessment-platforms": [
+						{
+							"title": "CT-SAST",
+							"uuid": "3f7a6c8e-1111-45b9-9ae8-4c6b1b7a9f8e"
+						},
+						{
+							"title": "CT-VP",
+							"uuid": "3f7a6c8e-2222-45b9-9ae8-4c6a1b7a9f8a"
+						},
+						{
+							"title": "CT-DAST",
+							"uuid": "f7a6c8e-3333-45b9-9ae8-4c6a1b7a9f8a"
+						},
+						{
+							"title": "CT-IAST",
+							"uuid": "3f7a6c8e-4444-45b9-9ae8-555555555555"
+						},
+						{
+							"title": "CT-SPV",
+							"uuid": "3f7a6c8e-5555-45b9-9ae8-555555555555"
+						},
+						{
+							"title": "CT-firmware-fuzzing",
+							"uuid": "3f7a6c8e-6666-45b9-9ae8-555555555555"
+						}
+					],
+					"components": []
+				},
+				"components": [
+					{
+						"description": "Home Assistant Green is a plug-and-play smart home hub running Home Assistant OS, providing local, privacy-focused control of smart home devices.",
+						"links": [
+							{
+								"href": "https://drive.google.com/uc?export=download&id=1a4vyx9gZ4meYvNP9pXADQSBgMZZa0RMt",
+								"media-type": "application/vnd.spdx+json",
+								"rel": "SBOM file"
+							},
+							{
+								"href": "https://drive.google.com/uc?export=download&id=1WhyIdgJzQchZLwDGHkfGtCKhwf6cULaW",
+								"media-type": "application/mud+json",
+								"rel": "MUD file"
+							}
+						],
+						"props": [
+							{
+								"name": "vendor",
+								"value": "Nabu Casa"
+							},
+							{
+								"name": "model",
+								"value": "Home Assistant Green"
+							},
+							{
+								"name": "version",
+								"value": "1.0.0"
+							},
+							{
+								"name": "git_url",
+								"value": "https://github.com/home-assistant/core"
+							},
+							{
+								"name": "language",
+								"value": "python"
+							},
+							{
+								"name": "token",
+								"value": ""
+							},
+							{
+								"name": "branch",
+								"value": "dev"
+							},
+							{
+								"name": "commit_sha",
+								"value": "280c25c"
+							}
+						],
+						"purpose": "Core smart home controller and integration platform.",
+						"status": {
+							"state": "operational"
+						},
+						"title": "Home Assistant Green Smart Home Hub",
+						"type": "this-system",
+						"uuid": "a7af2b1d-3d15-5e81-97af-f4142f75f4ad"
+					}
+				],
+				"observations": []
+			},
+			"metadata": {
+				"dsp-model-version": "1.0.0",
+				"last-modified": "2026-03-01T12:00:00Z",
+				"links": [
+					{
+						"href": "https://www.home-assistant.io/green/",
+						"rel": "Technical documentation",
+						"text": "Official product page"
+					}
+				],
+				"parties": [
+					{
+						"name": "Nabu Casa",
+						"remarks": "Manufacturer and official vendor of Home Assistant Green",
+						"type": "organization",
+						"uuid": "d26858b4-7b49-57dc-815a-ab289039c4d8"
+					}
+				],
+				"published": "2025-12-01T12:00:00Z",
+				"responsible-parties": [
+					{
+						"party-uuid": "d26858b4-7b49-57dc-815a-ab289039c4d8",
+						"role-id": "manufacturer"
+					},
+					{
+						"party-uuid": "9932b157-b5f6-59d2-81a1-1cf2533e6088",
+						"role-id": "ComponentTester"
+					},
+					{
+						"party-uuid": "5879e198-81f5-5606-94fe-83f7ea5c874c",
+						"role-id": "ComponentTester"
+					},
+					{
+						"party-uuid": "d7d9410e-28da-502d-91e1-cd9da65af43c",
+						"role-id": "ObP"
+					}
+				],
+				"revisions": [
+					{
+						"description": "Initial version of the DSP document.",
+						"dsp-model-version": "1.0.0",
+						"modified-by": {
+							"party-uuid": "d26858b4-7b49-57dc-815a-ab289039c4d8",
+							"role-id": "manufacturer"
+						},
+						"published": "2025-12-01",
+						"title": "Initial Release",
+						"version": "1.0.0"
+					},
+					{
+						"description": "Update branch name in the software repository of the component.",
+						"dsp-model-version": "1.0.0",
+						"modified-by": {
+							"party-uuid": "d26858b4-7b49-57dc-815a-ab289039c4d8",
+							"role-id": "manufacturer"
+						},
+						"published": "2026-03-01",
+						"title": "First revision",
+						"version": "1.0.1"
+					}
+				],
+				"roles": [
+					{
+						"description": "Creator of the device",
+						"id": "manufacturer",
+						"title": "Manufacturer"
+					}
+				],
+				"title": "Home Assistant Green generic DSP",
+				"version": "1.0.1"
+			},
+			"uuid": "bbae8107-3deb-599c-909a-bb60ab37aae1"
+		}
+	}
+}

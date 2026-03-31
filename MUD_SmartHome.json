@@ -1,0 +1,135 @@
+{
+	"ietf-mud:mud": {
+		"cache-validity": 48,
+		"documentation": "https://www.home-assistant.io/green/",
+		"from-device-policy": {
+			"access-lists": {
+				"access-list": [
+					{
+						"name": "fripv4-acl52076"
+					}
+				]
+			}
+		},
+		"ietf-access-control-list:acls": {
+			"acl": [
+				{
+					"aces": {
+						"ace": [
+							{
+								"actions": {
+									"forwarding": "accept"
+								},
+								"matches": {
+									"ietf-mud:mud": {
+										"my-controller": [
+											null
+										]
+									}
+								},
+								"name": "toace60204"
+							},
+							{
+								"actions": {
+									"forwarding": "accept"
+								},
+								"matches": {
+									"ietf-mud:mud": {
+										"local-networks": [
+											null
+										]
+									},
+									"ipv4": {
+										"protocol": 6
+									}
+								},
+								"name": "toace44539"
+							},
+							{
+								"actions": {
+									"forwarding": "accept"
+								},
+								"matches": {
+									"ietf-mud:mud": {
+										"same-manufacturer": [
+											null
+										]
+									}
+								},
+								"name": "toace2553"
+							}
+						]
+					},
+					"name": "toipv4-acl52076",
+					"type": "ipv4-acl-type"
+				},
+				{
+					"aces": {
+						"ace": [
+							{
+								"actions": {
+									"forwarding": "accept"
+								},
+								"matches": {
+									"ietf-mud:mud": {
+										"my-controller": [
+											null
+										]
+									}
+								},
+								"name": "frace60204"
+							},
+							{
+								"actions": {
+									"forwarding": "accept"
+								},
+								"matches": {
+									"ietf-mud:mud": {
+										"local-networks": [
+											null
+										]
+									},
+									"ipv4": {
+										"protocol": 6
+									}
+								},
+								"name": "frace44539"
+							},
+							{
+								"actions": {
+									"forwarding": "accept"
+								},
+								"matches": {
+									"ietf-mud:mud": {
+										"same-manufacturer": [
+											null
+										]
+									}
+								},
+								"name": "frace2553"
+							}
+						]
+					},
+					"name": "fripv4-acl52076",
+					"type": "ipv4-acl-type"
+				}
+			]
+		},
+		"is-supported": true,
+		"last-change": "2025-12-10T15:24:29.205Z",
+		"mfg-name": "Nabu Casa",
+		"mud-signature": "https://example.com/mud/home-assistant-green.p7s",
+		"mud-url": "https://drive.google.com/uc?export=download&id=1WhyIdgJzQchZLwDGHkfGtCKhwf6cULaW",
+		"mud-version": 1,
+		"systeminfo": "Home Assistant Green smart home controller",
+		"to-device-policy": {
+			"access-lists": {
+				"access-list": [
+					{
+						"name": "toipv4-acl52076"
+					}
+				]
+			}
+		}
+	}
+}
